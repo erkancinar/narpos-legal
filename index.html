@@ -36,6 +36,30 @@ a{color:inherit;text-decoration:none}
   background:rgba(255,255,255,.78);backdrop-filter:blur(8px);
 }
 .dot{width:8px;height:8px;border-radius:999px;background:var(--primary)}
+.home-link{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:8px 14px;color:var(--ink);font-size:13px;font-weight:500;background:rgba(255,255,255,.85);transition:all .2s}
+.home-link:hover{border-color:var(--primary);color:var(--primary);background:#fff}
+.home-link svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.header-actions{display:flex;align-items:center;gap:10px}
+
+/* ---- Footer CTA ---- */
+.cta-card{
+  margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:28px 32px;border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--primary-soft) 0%,#fff 100%);
+  border:1px solid var(--border);border-left:4px solid var(--primary);
+}
+.cta-card-text strong{display:block;color:var(--ink);font-size:17px;font-weight:600;margin-bottom:4px}
+.cta-card-text p{margin:0;color:var(--muted);font-size:14px}
+.cta-button{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--primary);color:#fff;text-decoration:none;
+  padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px;white-space:nowrap;
+  transition:all .2s;
+}
+.cta-button:hover{background:var(--primary-dark);transform:translateX(2px)}
+.cta-button svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.cta-button:hover svg{transform:translateX(3px)}
+@media(max-width:600px){.cta-card{flex-direction:column;align-items:flex-start;text-align:left;padding:22px}}
 
 /* ---- Hero ---- */
 .hero{
@@ -137,7 +161,13 @@ a{color:inherit;text-decoration:none}
   <a href="https://narpos.com.tr" aria-label="NarPOS ana sayfa">
     <img class="logo" src="assets/narpos-logo.png" alt="NarPOS">
   </a>
-  <div class="pill"><span class="dot"></span> Yasal belge merkezi</div>
+  <div class="header-actions">
+    <span class="pill"><span class="dot"></span> Yasal belge merkezi</span>
+    <a class="home-link" href="https://narpos.com.tr" aria-label="NarPOS ana siteye dön">
+      narpos.com.tr
+      <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+    </a>
+  </div>
 </header>
 
 <section class="hero" aria-labelledby="page-title">
@@ -183,6 +213,17 @@ a{color:inherit;text-decoration:none}
   </a>
 
 </section>
+
+<aside class="cta-card" aria-label="NarPOS ana sitesi">
+  <div class="cta-card-text">
+    <strong>NarPOS hakkında daha fazla bilgi mi istiyorsunuz?</strong>
+    <p>Restoran POS sistemi, adisyon yönetimi ve tüm çözümlerimizi keşfedin.</p>
+  </div>
+  <a class="cta-button" href="https://narpos.com.tr" aria-label="narpos.com.tr ana siteye git">
+    narpos.com.tr
+    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+</aside>
 
 <footer class="footer">
   <div class="footer-grid">

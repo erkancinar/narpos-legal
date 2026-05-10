@@ -31,6 +31,10 @@ a:hover{text-decoration:underline}
 }
 .back:hover{color:var(--primary);background:var(--primary-soft);text-decoration:none}
 .back svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.home-link{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:#fff;transition:all .2s;text-decoration:none}
+.home-link:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
+.home-link svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
 /* Article */
 article{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:48px 40px;box-shadow:var(--shadow-sm)}
@@ -74,7 +78,7 @@ strong{color:var(--ink);font-weight:600}
 
 <header class="site-header">
   <a href="https://narpos.com.tr" aria-label="NarPOS"><img class="logo" src="assets/narpos-logo.png" alt="NarPOS"></a>
-  <a class="back" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Yasal belgeler</a>
+  <div class="header-actions"><a class="back" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Yasal belgeler</a><a class="home-link" href="https://narpos.com.tr">narpos.com.tr <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
 </header>
 
 <article>
