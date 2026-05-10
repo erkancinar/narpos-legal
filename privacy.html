@@ -7,32 +7,50 @@
 <meta name="description" content="NarPOS sistemlerinin kullanıcı verilerini toplama ve işleme hakkında gizlilik politikası.">
 <link rel="icon" href="assets/narpos-logo-dikey.png" type="image/png">
 <style>
-:root{--primary:#ff3011;--primary-dark:#e02a0f;--text:#242424;--muted:#666;--bg:#f8f8f8;--border:#e5e5e5}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-.container{max-width:760px;margin:0 auto;padding:32px 24px;background:#fff;min-height:100vh}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border)}
-.topbar img{height:36px}
-.back{color:var(--muted);text-decoration:none;font-size:14px}
-.back:hover{color:var(--primary)}
-h1{color:var(--text);font-size:32px;margin-bottom:8px;font-weight:700}
-.updated{color:var(--muted);font-size:14px;margin-bottom:32px}
-h2{color:var(--primary);font-size:22px;margin-top:32px;margin-bottom:12px;font-weight:600}
-p{margin-bottom:16px}
-ul{margin-bottom:16px;padding-left:24px}
-li{margin-bottom:8px}
-strong{color:var(--text)}
-.contact{background:var(--bg);border-left:4px solid var(--primary);padding:20px;margin:32px 0 16px;border-radius:4px;font-size:14px;line-height:1.8}
-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13px}
-@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}.topbar img{height:28px}}
+:root{
+  --primary:#ff3011;--primary-dark:#d9280f;--primary-soft:#fff5f2;
+  --ink:#111827;--text:#374151;--muted:#6b7280;
+  --bg:#fafafa;--card:#fff;--border:#e8e5e3;
+  --shadow-sm:0 1px 2px rgba(17,24,39,.04);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--primary-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(820px,100%);margin:0 auto;padding:24px}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0 24px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.logo{height:36px;width:auto}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid transparent;transition:all .2s}
+.back:hover{color:var(--primary);background:var(--primary-soft);text-decoration:none}
+.back svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+article{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:48px 40px;box-shadow:var(--shadow-sm)}
+.eyebrow{display:inline-block;color:var(--primary-dark);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+h1{color:var(--ink);font-size:clamp(28px,4.5vw,40px);line-height:1.15;letter-spacing:-.01em;font-weight:800;margin-bottom:8px}
+.updated{color:var(--muted);font-size:14px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+h2{color:var(--ink);font-size:20px;margin:36px 0 14px;font-weight:700;letter-spacing:-.005em}
+h2:first-of-type{margin-top:0}
+p{margin-bottom:16px;color:var(--text)}
+ul{margin:16px 0;padding-left:24px}
+li{margin-bottom:8px;color:var(--text)}
+li::marker{color:var(--primary)}
+strong{color:var(--ink);font-weight:600}
+.contact{background:linear-gradient(135deg,var(--primary-soft) 0%,#fff 100%);border:1px solid var(--border);border-left:4px solid var(--primary);padding:24px;margin:32px 0 0;border-radius:8px;font-size:14px;line-height:1.8}
+.contact strong{display:block;color:var(--ink);margin-bottom:10px;font-size:15px}
+.footer{margin-top:48px;text-align:center;font-size:13px;color:var(--muted);padding-bottom:16px}
+@media(max-width:560px){.wrap{padding:18px 16px}.site-header{padding-bottom:18px;margin-bottom:24px}.logo{height:30px}.back{padding:6px 12px;font-size:13px}article{padding:28px 22px;border-radius:10px}h2{font-size:18px;margin-top:28px}.contact{padding:18px}}
 </style>
 </head>
 <body>
-<div class="container">
-<div class="topbar">
-<a href="https://narpos.com.tr"><img src="assets/narpos-logo.png" alt="NarPOS"></a>
-<a class="back" href="index.html">← Yasal belgeler</a>
-</div>
+<div class="wrap">
+
+<header class="site-header">
+  <a href="https://narpos.com.tr" aria-label="NarPOS"><img class="logo" src="assets/narpos-logo.png" alt="NarPOS"></a>
+  <a class="back" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Yasal belgeler</a>
+</header>
+
+<article>
+<span class="eyebrow">Veri Gizliliği</span>
 <h1>Gizlilik Politikası</h1>
 <p class="updated">Son güncelleme: 10 Mayıs 2026</p>
 
@@ -85,7 +103,7 @@ footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);text-
 <p>Bu Gizlilik Politikası gerekli durumlarda güncellenebilir. Güncel sürüm her zaman bu sayfada yayınlanır. Önemli değişikliklerde kullanıcılarımız bilgilendirilir.</p>
 
 <div class="contact">
-<strong>İletişim:</strong><br>
+<strong>İletişim</strong>
 NarPOS Yazılım Mühendislik Bilgisayar ve Danışmanlık Ticaret A.Ş.<br>
 Adres: Noramin İş Merkezi, Maslak, Büyükdere Cd. No:237 D:402, 34485 Sarıyer/İstanbul<br>
 Telefon: <a href="tel:+902129094889">+90 212 909 48 89</a><br>
@@ -95,9 +113,12 @@ Web: <a href="https://narpos.com.tr">narpos.com.tr</a><br>
 VKN: 6291617567 · Ticaret Sicil No: 807198-0 · Mersis No: 0629161756700001
 </div>
 
-<footer>
+</article>
+
+<footer class="footer">
 <p>© 2026 NarPOS Yazılım Mühendislik Bilgisayar ve Danışmanlık Ticaret A.Ş. — Tüm hakları saklıdır.</p>
 </footer>
+
 </div>
 </body>
 </html>
