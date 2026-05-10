@@ -4,50 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NarPOS — Yasal Belgeler</title>
-<meta name="description" content="NarPOS Yazılım A.Ş. iç araçları için yasal belgeler: Gizlilik Politikası, Kullanım Koşulları, KVKK Aydınlatma Metni.">
+<meta name="description" content="NarPOS yasal belgeler: Gizlilik Politikası, Kullanım Koşulları, KVKK Aydınlatma Metni.">
+<link rel="icon" href="assets/narpos-logo-dikey.png" type="image/png">
 <style>
-:root{--primary:#1e40af;--text:#1f2937;--muted:#6b7280;--bg:#f9fafb;--card:#fff;--border:#e5e7eb}
+:root{--primary:#ff3011;--primary-dark:#e02a0f;--text:#242424;--muted:#666;--bg:#f8f8f8;--card:#fff;--border:#e5e5e5}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 .container{max-width:760px;margin:0 auto;padding:48px 24px}
 header{text-align:center;margin-bottom:48px}
-h1{font-size:32px;color:var(--primary);margin-bottom:8px}
+.logo{height:60px;width:auto;margin-bottom:24px}
+h1{font-size:32px;color:var(--text);margin-bottom:8px;font-weight:700}
 header p{color:var(--muted)}
 .cards{display:grid;gap:16px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:inherit;transition:all .2s}
-.card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 12px rgba(30,64,175,.08)}
+.card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,48,17,.08)}
 .card h2{font-size:20px;color:var(--primary);margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .card p{color:var(--muted);font-size:14px}
 .icon{font-size:24px}
-footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px}
+footer{margin-top:48px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8}
 footer a{color:var(--primary);text-decoration:none}
-@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}}
+footer a:hover{text-decoration:underline}
+@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}.logo{height:44px}}
 </style>
 </head>
 <body>
 <div class="container">
 <header>
-<h1>Ercesa Yazılım — Yasal Belgeler</h1>
-<p>Ercesa Yazılım (NarPOS markası) iç araçları için kullanım, gizlilik ve KVKK aydınlatma metinleri.</p>
+<a href="https://narpos.com.tr"><img class="logo" src="assets/narpos-logo.png" alt="NarPOS"></a>
+<h1>Yasal Belgeler</h1>
+<p>NarPOS hizmetleri için gizlilik, kullanım ve KVKK aydınlatma metinleri.</p>
 </header>
 <div class="cards">
-<a class="card" href="privacy.html">
-<h2><span class="icon">🔒</span>Gizlilik Politikası</h2>
-<p>NarPOS iç araçlarının kullanıcı verilerini nasıl topladığı, sakladığı ve işlediği hakkında bilgi.</p>
-</a>
-<a class="card" href="terms.html">
-<h2><span class="icon">📜</span>Kullanım Koşulları</h2>
-<p>NarPOS iç araçlarına erişim ve kullanım kuralları, sorumluluklar ve sınırlamalar.</p>
-</a>
-<a class="card" href="kvkk.html">
+<a class="card" href="kvkk">
 <h2><span class="icon">🛡️</span>KVKK Aydınlatma Metni</h2>
 <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında işlenen kişisel veriler hakkında bilgilendirme.</p>
 </a>
+<a class="card" href="privacy">
+<h2><span class="icon">🔒</span>Gizlilik Politikası</h2>
+<p>NarPOS sistemlerinin kullanıcı verilerini nasıl topladığı ve işlediği hakkında bilgi.</p>
+</a>
+<a class="card" href="terms">
+<h2><span class="icon">📜</span>Kullanım Koşulları</h2>
+<p>NarPOS hizmetlerine erişim ve kullanım kuralları, sorumluluklar ve sınırlamalar.</p>
+</a>
 </div>
 <footer>
-<p>Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti. (NarPOS markası) — <a href="https://narpos.com.tr">narpos.com.tr</a> — <a href="mailto:erkan.cinar@narpos.com.tr">erkan.cinar@narpos.com.tr</a></p>
-<p style="margin-top:8px">Noramin İş Merkezi, Maslak, Büyükdere Cd. No:237 D:402, 34485 Sarıyer/İstanbul — Tel: +90 212 909 48 89</p>
-<p style="margin-top:8px">Son güncelleme: 10 Mayıs 2026</p>
+<p><strong>Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti.</strong> (NarPOS markası)</p>
+<p>Noramin İş Merkezi, Maslak, Büyükdere Cd. No:237 D:402, 34485 Sarıyer/İstanbul</p>
+<p>Tel: <a href="tel:+902129094889">+90 212 909 48 89</a> · E-posta: <a href="mailto:info@narpos.com.tr">info@narpos.com.tr</a> · Web: <a href="https://narpos.com.tr">narpos.com.tr</a></p>
+<p style="margin-top:12px">Son güncelleme: 10 Mayıs 2026</p>
 </footer>
 </div>
 </body>

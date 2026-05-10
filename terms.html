@@ -4,112 +4,96 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kullanım Koşulları — NarPOS</title>
-<meta name="description" content="NarPOS iç araçlarının kullanım koşulları, sorumluluk ve sınırlamalar.">
+<meta name="description" content="NarPOS hizmetlerinin kullanım koşulları, sorumluluklar ve sınırlamalar.">
+<link rel="icon" href="assets/narpos-logo-dikey.png" type="image/png">
 <style>
-:root{--primary:#1e40af;--text:#1f2937;--muted:#6b7280;--bg:#f9fafb;--border:#e5e7eb}
+:root{--primary:#ff3011;--primary-dark:#e02a0f;--text:#242424;--muted:#666;--bg:#f8f8f8;--border:#e5e5e5}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-.container{max-width:760px;margin:0 auto;padding:48px 24px;background:#fff;min-height:100vh}
-.back{display:inline-block;color:var(--primary);text-decoration:none;margin-bottom:24px;font-size:14px}
-.back:hover{text-decoration:underline}
-h1{color:var(--primary);font-size:32px;margin-bottom:8px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{max-width:760px;margin:0 auto;padding:32px 24px;background:#fff;min-height:100vh}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.topbar img{height:36px}
+.back{color:var(--muted);text-decoration:none;font-size:14px}
+.back:hover{color:var(--primary)}
+h1{color:var(--text);font-size:32px;margin-bottom:8px;font-weight:700}
 .updated{color:var(--muted);font-size:14px;margin-bottom:32px}
-h2{color:var(--primary);font-size:22px;margin-top:32px;margin-bottom:12px;border-bottom:2px solid var(--border);padding-bottom:8px}
-h3{font-size:18px;margin-top:24px;margin-bottom:8px;color:var(--text)}
+h2{color:var(--primary);font-size:22px;margin-top:32px;margin-bottom:12px;font-weight:600}
 p{margin-bottom:16px}
 ul{margin-bottom:16px;padding-left:24px}
 li{margin-bottom:8px}
-strong{color:var(--primary)}
-.warn{background:#fef3c7;border-left:4px solid #f59e0b;padding:16px;margin:24px 0;border-radius:4px}
-.contact{background:var(--bg);border-left:4px solid var(--primary);padding:16px;margin:24px 0;border-radius:4px}
+strong{color:var(--text)}
+.contact{background:var(--bg);border-left:4px solid var(--primary);padding:20px;margin:32px 0 16px;border-radius:4px;font-size:14px;line-height:1.8}
 footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13px}
-@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}}
+@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}.topbar img{height:28px}}
 </style>
 </head>
 <body>
 <div class="container">
+<div class="topbar">
+<a href="https://narpos.com.tr"><img src="assets/narpos-logo.png" alt="NarPOS"></a>
 <a class="back" href="index.html">← Yasal belgeler</a>
+</div>
 <h1>Kullanım Koşulları</h1>
 <p class="updated">Son güncelleme: 10 Mayıs 2026</p>
 
-<h2>1. Kapsam</h2>
-<p>Bu Kullanım Koşulları, <strong>Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti.</strong> ("Şirket"; NarPOS markası ile faaliyet gösteren) tarafından sağlanan iç araç ve servislere erişim ve kullanım kurallarını belirler. Bu servisler:</p>
+<h2>1. Taraflar ve Kapsam</h2>
+<p>İşbu Kullanım Koşulları, <strong>Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti.</strong> ("Şirket", "NarPOS") ile NarPOS web sitesi (narpos.com.tr), yazılımları, mobil uygulamaları, panelleri ve diğer dijital hizmetlerine erişen veya kullanan gerçek/tüzel kişiler ("Kullanıcı") arasındaki ilişkiyi düzenler.</p>
+<p>Sistemlere erişim sağlayarak işbu koşulları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş sayılırsınız.</p>
+
+<h2>2. Hizmetin Tanımı</h2>
+<p>NarPOS, restoran ve perakende işletmelerine yönelik POS sistemi, adisyon yönetimi, stok takibi, kurye/garson uygulamaları, sadakat programları ve ilgili dijital hizmetleri sunan bir yazılım çözümüdür.</p>
+
+<h2>3. Kullanıcı Yükümlülükleri</h2>
 <ul>
-<li>NarPOS Lens kurumsal aktivite raporlama paneli (lens.narpos.tr)</li>
-<li>İç monitoring panelleri (metrics, uptime, logs subdomain'leri)</li>
-<li>SSO Hub (auth.narpos.tr)</li>
-<li>Self-host VPN (vpn.narpos.tr)</li>
-<li>CI/CD platformu (ci.narpos.tr)</li>
-<li>Diğer iç destek araçları</li>
+<li>Hesap bilgilerini güvenli tutmak ve üçüncü kişilerle paylaşmamak</li>
+<li>Sistemleri yalnızca yasal ve sözleşmede belirtilen amaçlarla kullanmak</li>
+<li>Sistem güvenliğini tehdit edecek davranışlardan kaçınmak (yetkisiz erişim, sızma testi, otomatik veri çekimi vb.)</li>
+<li>Sistem üzerinden iletilen bilgilerin doğruluğundan sorumlu olmak</li>
+<li>Yasal mevzuata uygun davranmak (KVKK, vergi, ticaret hukuku vb.)</li>
 </ul>
 
-<h2>2. Yetkili Kullanıcı</h2>
-<p>Bu servisler <strong>yalnızca Şirket çalışanları ve yetkili iş ortakları</strong> için tahsis edilmiştir. Erişim, geçerli bir <code>@narpos.com.tr</code> Google Workspace hesabı ve organizasyon yöneticisi tarafından verilen ek yetkiler ile sağlanır.</p>
-
-<div class="warn">
-⚠️ <strong>Yetkisiz erişim girişimi yasal işleme tabidir.</strong> Bilgi sistemlerine yetkisiz erişim, Türk Ceza Kanunu Madde 243 ve devamı maddeleri kapsamında suçtur.
-</div>
-
-<h2>3. Kullanım Kuralları</h2>
-
-<h3>3.1 Yapılması Beklenenler</h3>
+<h2>4. Yasaklanan Davranışlar</h2>
 <ul>
-<li>Hesap bilgilerinizi (Google Workspace şifresi) güvenli tutmak</li>
-<li>Şüpheli erişim girişimlerini derhal yöneticiye bildirmek</li>
-<li>Erişim haklarınızı yalnızca iş gereksinimleri için kullanmak</li>
-<li>Sistem üzerinden elde edilen verileri gizli tutmak</li>
-</ul>
-
-<h3>3.2 Yasaklanan Davranışlar</h3>
-<ul>
-<li>Hesap bilgilerinizi başkasıyla paylaşmak</li>
-<li>Yetkili olmadığınız panellere/verilere erişmeye çalışmak</li>
-<li>Sistem üzerinden elde edilen verileri Şirket dışına sızdırmak</li>
-<li>Sistem güvenlik mekanizmalarını atlatmaya çalışmak</li>
-<li>Otomatik araç (bot, scraper) ile yetkisiz veri çekmek</li>
-<li>Sisteme zarar verecek eylemlerde bulunmak (DoS, sızma vb.)</li>
-</ul>
-
-<h2>4. Veri Erişim ve Sorumluluk</h2>
-<p>Sistem üzerinden erişebileceğiniz veriler (özellikle NarPOS Lens aktivite raporları) <strong>kişisel verileri</strong> içerir. Bu verilerin kullanımında 6698 sayılı KVKK ve ilgili mevzuata uymakla yükümlüsünüz.</p>
-<p>Lens raporlarına erişimi olan kullanıcılar:</p>
-<ul>
-<li>Verileri yalnızca operasyonel amaçlarla kullanmalıdır</li>
-<li>Bireysel performans değerlendirmelerini gizli tutmalıdır</li>
-<li>Verileri ticari amaçla kullanmamalı veya satmamalıdır</li>
+<li>Sistemlerin tersine mühendisliği, deşifre edilmesi veya kaynak kodun çıkarılması</li>
+<li>Sistemlere zarar verecek yazılım veya komut çalıştırma (virüs, malware, DoS vb.)</li>
+<li>Başka kullanıcıların hesaplarına izinsiz erişim girişimi</li>
+<li>Şirket'in fikri mülkiyet haklarını ihlal eden eylemler</li>
+<li>Sistem üzerinden yasa dışı içerik paylaşımı</li>
 </ul>
 
 <h2>5. Hizmet Sürekliliği</h2>
-<p>Şirket, bu servislerin sürekli ve hatasız çalışmasını garanti etmez. Bakım, güncelleme veya teknik sorun nedeniyle servisler geçici olarak kullanılamayabilir. Önceden duyurulan veya acil durumlardaki kesintiler için Şirket'in sorumluluğu yoktur.</p>
+<p>Şirket, hizmetin sürekli ve kesintisiz çalışmasını sağlamak için makul çaba gösterir; ancak bakım, güncelleme, üçüncü taraf kaynaklı kesintiler veya mücbir sebepler nedeniyle hizmette geçici kesintiler yaşanabilir. Bu tür kesintilerden Şirket'in sorumluluğu, sözleşmede aksi belirtilmedikçe sınırlıdır.</p>
 
-<h2>6. Hesap Sonlandırma</h2>
-<p>Şirket aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar:</p>
+<h2>6. Fikri Mülkiyet</h2>
+<p>NarPOS markası, logoları, yazılım kodları, tasarımları, içerikleri ve tüm ilgili fikri mülkiyet hakları Şirket'e aittir. İzinsiz kopyalama, çoğaltma, dağıtma veya değiştirme yasaktır ve hukuki yaptırıma tabidir.</p>
+
+<h2>7. Sorumluluk Sınırlaması</h2>
+<p>Yasal olarak izin verilen azami ölçüde Şirket; dolaylı, özel, arızi veya sonuçsal zararlardan, gelir kayıplarından veya iş kesintilerinden sorumlu tutulamaz. Hizmetin Kullanıcı tarafından kullanımından doğan sonuçlardan Kullanıcı sorumludur.</p>
+
+<h2>8. Hesap Sonlandırma</h2>
+<p>Şirket aşağıdaki hallerde Kullanıcı'nın hesabını askıya alma veya sonlandırma hakkını saklı tutar:</p>
 <ul>
-<li>Bu kullanım koşullarının ihlali</li>
-<li>İş ilişkisinin sonlandırılması</li>
+<li>İşbu Kullanım Koşulları'nın ihlali</li>
+<li>Sözleşmesel yükümlülüklerin yerine getirilmemesi</li>
+<li>Yasal mevzuata aykırı kullanım tespiti</li>
 <li>Güvenlik tehdidi tespit edilmesi</li>
-<li>Hukuki yükümlülükler</li>
 </ul>
-<p>Hesap sonlandırıldığında erişim tüm panellere otomatik olarak kesilir (Google Workspace deaktivasyonu ile).</p>
 
-<h2>7. Fikri Mülkiyet</h2>
-<p>Tüm sistem yazılımları, veri tabanları, raporlar ve görsel öğeler Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti.'nin münhasır mülkiyetindedir. İzinsiz kopyalama, dağıtma veya değiştirme yasaktır.</p>
+<h2>9. Kişisel Verilerin Korunması</h2>
+<p>Kullanıcı'nın kişisel verileri, <a href="kvkk">KVKK Aydınlatma Metni</a> ve <a href="privacy">Gizlilik Politikası</a> kapsamında işlenir.</p>
 
-<h2>8. Sorumluluk Sınırlaması</h2>
-<p>Şirket, yasal olarak izin verilen azami ölçüde, dolaylı, arızi veya sonuçsal zararlardan sorumlu değildir. Sistemin doğru kullanımından doğacak sonuçlardan kullanıcı sorumludur.</p>
+<h2>10. Değişiklikler</h2>
+<p>Şirket, işbu Kullanım Koşulları'nı zaman zaman güncelleme hakkını saklı tutar. Önemli değişiklikler kayıtlı iletişim adresine bildirilir. Güncellemeden sonra sistemi kullanmaya devam etmek, yeni koşulların kabulü anlamına gelir.</p>
 
-<h2>9. Değişiklikler</h2>
-<p>Şirket bu koşulları zaman zaman güncelleyebilir. Önemli değişiklikler kayıtlı e-posta adresinize bildirilir. Güncellemeden sonra sistemi kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
-
-<h2>10. Uygulanacak Hukuk ve Yargı</h2>
-<p>Bu koşullar Türkiye Cumhuriyeti yasalarına tabidir. Doğacak uyuşmazlıklarda İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+<h2>11. Uygulanacak Hukuk ve Yetkili Yargı</h2>
+<p>İşbu Kullanım Koşulları Türkiye Cumhuriyeti yasalarına tabidir. Doğacak uyuşmazlıklarda <strong>İstanbul Mahkemeleri ve İcra Daireleri</strong> yetkilidir.</p>
 
 <div class="contact">
 <strong>İletişim:</strong><br>
 Ercesa Yazılım Müh. Bil. Ve Dan. Tic. Ltd. Şti. (NarPOS markası)<br>
 Adres: Noramin İş Merkezi, Maslak, Büyükdere Cd. No:237 D:402, 34485 Sarıyer/İstanbul<br>
 Telefon: <a href="tel:+902129094889">+90 212 909 48 89</a><br>
-E-posta: <a href="mailto:erkan.cinar@narpos.com.tr">erkan.cinar@narpos.com.tr</a><br>
+E-posta: <a href="mailto:info@narpos.com.tr">info@narpos.com.tr</a><br>
 Web: <a href="https://narpos.com.tr">narpos.com.tr</a>
 </div>
 
