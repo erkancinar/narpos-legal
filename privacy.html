@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gizlilik Politikası — NarPOS</title>
+<meta name="description" content="NarPOS iç araçlarının kullanıcı verilerini toplama ve işleme hakkında gizlilik politikası.">
+<style>
+:root{--primary:#1e40af;--text:#1f2937;--muted:#6b7280;--bg:#f9fafb;--border:#e5e7eb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{max-width:760px;margin:0 auto;padding:48px 24px;background:#fff;min-height:100vh}
+.back{display:inline-block;color:var(--primary);text-decoration:none;margin-bottom:24px;font-size:14px}
+.back:hover{text-decoration:underline}
+h1{color:var(--primary);font-size:32px;margin-bottom:8px}
+.updated{color:var(--muted);font-size:14px;margin-bottom:32px}
+h2{color:var(--primary);font-size:22px;margin-top:32px;margin-bottom:12px;border-bottom:2px solid var(--border);padding-bottom:8px}
+h3{font-size:18px;margin-top:24px;margin-bottom:8px;color:var(--text)}
+p{margin-bottom:16px}
+ul{margin-bottom:16px;padding-left:24px}
+li{margin-bottom:8px}
+strong{color:var(--primary)}
+.contact{background:var(--bg);border-left:4px solid var(--primary);padding:16px;margin:24px 0;border-radius:4px}
+footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:480px){.container{padding:24px 16px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="index.html">← Yasal belgeler</a>
+<h1>Gizlilik Politikası</h1>
+<p class="updated">Son güncelleme: 10 Mayıs 2026</p>
+
+<h2>1. Veri Sorumlusu</h2>
+<p><strong>NarPOS Yazılım A.Ş.</strong> ("NarPOS", "biz") bu uygulamanın veri sorumlusudur. Bu politika, NarPOS iç araçlarına (Lens aktivite raporlama paneli, monitoring araçları, VPN ve benzeri internal sistemler) erişim ve kullanım sürecinde toplanan kişisel verilerin işlenmesini kapsar.</p>
+
+<h2>2. Topladığımız Veriler</h2>
+
+<h3>2.1 Google OAuth ile Sağlanan Veriler</h3>
+<p>NarPOS iç araçlarına Google Workspace hesabınızla giriş yaptığınızda Google üzerinden aşağıdaki bilgilere erişim talep ederiz:</p>
+<ul>
+<li><strong>E-posta adresi</strong> (kimlik doğrulama için zorunlu)</li>
+<li><strong>Profil adı</strong> (panel içinde görünür)</li>
+<li><strong>Profil resmi</strong> (opsiyonel, panel görsel öğesi)</li>
+<li><strong>Workspace organizasyon bilgisi</strong> (yetkilendirme için kullanılır)</li>
+</ul>
+<p>Bu veriler Google Workspace OAuth 2.0 standart kapsamı (<code>openid profile email</code>) içinde sınırlı tutulur.</p>
+
+<h3>2.2 Operasyonel Veriler</h3>
+<ul>
+<li><strong>Erişim kayıtları:</strong> IP adresi, tarayıcı bilgisi, erişim tarihi/saati (audit log)</li>
+<li><strong>Çerezler ve oturum bilgileri:</strong> Tarayıcınızda yalnızca oturum süresince tutulan teknik çerezler</li>
+<li><strong>Cloudflare Access kayıtları:</strong> Hangi panele kim ne zaman erişti bilgisi (güvenlik denetimi için)</li>
+</ul>
+
+<h3>2.3 Lens Aktivite Verileri (Sadece Lens kullanıcılarına)</h3>
+<p>NarPOS Lens kurumsal aktivite raporlama paneli, NarPOS Discord/Fluxer iletişim sunucusu üzerinden aşağıdaki ekip aktivite verilerini toplar:</p>
+<ul>
+<li>Mesaj meta verileri (kim, ne zaman, hangi kanal — içerik 30-90 gün sonra otomatik silinir)</li>
+<li>Sesli kanal kullanım süreleri</li>
+<li>Çevrimiçi/çevrimdışı durum bilgisi</li>
+<li>Görüntülenen kullanıcı adı (display name)</li>
+</ul>
+<p>Bu veriler sadece NarPOS yöneticileri ve İcra Kurulu tarafından, ekip performansı takibi amacıyla görüntülenebilir.</p>
+
+<h2>3. Verilerin Kullanım Amaçları</h2>
+<ul>
+<li>Kimlik doğrulama ve yetkilendirme</li>
+<li>NarPOS iç araçlarına erişim kontrolü</li>
+<li>Güvenlik denetimi ve anormal erişim tespiti</li>
+<li>Ekip performans takibi (sadece Lens kullanıcılarına)</li>
+<li>Hukuki yükümlülüklerin yerine getirilmesi</li>
+</ul>
+
+<h2>4. Verilerin Saklama Süreleri</h2>
+<ul>
+<li><strong>OAuth kimlik bilgileri:</strong> Hesap aktif olduğu sürece</li>
+<li><strong>Erişim logları:</strong> 1 yıl</li>
+<li><strong>Lens aktivite metaverileri:</strong> 1 yıl</li>
+<li><strong>Lens mesaj içerikleri:</strong> 30-90 gün sonra otomatik silinir (sadece hash kalır)</li>
+<li><strong>Audit kayıtları:</strong> KVKK ve ilgili mevzuat süresince</li>
+</ul>
+
+<h2>5. Üçüncü Taraflara Aktarım</h2>
+<p>Kişisel verileriniz aşağıdaki hizmet sağlayıcılar üzerinden işlenir:</p>
+<ul>
+<li><strong>Google Workspace:</strong> Kimlik doğrulama (OAuth)</li>
+<li><strong>Cloudflare:</strong> CDN, DDoS koruma, Access (Zero Trust) — IP ve erişim metaveri</li>
+<li><strong>Amazon Web Services (SES):</strong> Sistem bildirimleri için e-posta gönderimi</li>
+<li><strong>Discord (Fluxer):</strong> Sadece Lens için aktivite veri kaynağı</li>
+</ul>
+<p>Bu hizmet sağlayıcılar dışında verileriniz <strong>üçüncü taraflara satılmaz, kiralanmaz veya ticari amaçla paylaşılmaz</strong>.</p>
+
+<h2>6. Veri Güvenliği</h2>
+<ul>
+<li>Tüm bağlantılar TLS 1.2+ ile şifrelenir</li>
+<li>Veriler şifrelenmiş şekilde depolanır</li>
+<li>Erişim çok faktörlü kimlik doğrulama (Google) ile korunur</li>
+<li>Düzenli güvenlik denetimleri yapılır</li>
+<li>Yedekler şifrelenmiş Cloudflare R2 deposunda tutulur</li>
+</ul>
+
+<h2>7. Haklarınız</h2>
+<p>6698 sayılı KVKK kapsamında haklarınız <a href="kvkk.html">KVKK Aydınlatma Metni</a> sayfasında detaylı açıklanmıştır.</p>
+
+<h2>8. Çerezler</h2>
+<p>NarPOS iç araçları sadece <strong>teknik amaçlı zorunlu çerezler</strong> kullanır (oturum yönetimi, CSRF koruması). Reklam veya analytics çerezi kullanılmaz.</p>
+
+<h2>9. Politika Güncellemeleri</h2>
+<p>Bu politikada yapılacak değişiklikler bu sayfada yayınlanır. Önemli değişikliklerde kayıtlı e-posta adresinize bildirim gönderilir.</p>
+
+<div class="contact">
+<strong>İletişim:</strong><br>
+NarPOS Yazılım A.Ş.<br>
+E-posta: <a href="mailto:erkan.cinar@narpos.com.tr">erkan.cinar@narpos.com.tr</a><br>
+Web: <a href="https://narpos.com.tr">narpos.com.tr</a>
+</div>
+
+<footer>
+<p>© 2026 NarPOS Yazılım A.Ş. — Tüm hakları saklıdır.</p>
+</footer>
+</div>
+</body>
+</html>
