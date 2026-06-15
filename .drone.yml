@@ -24,10 +24,11 @@ steps:
       - cp *.html favicon.ico dist/
       - cp -R assets/. dist/assets/
       - test -f dist/privacy-narcrm.html
+      - test -f dist/terms-narcrm.html
       - npx --yes wrangler@4.100.0 pages deploy dist --project-name narpos-legal --branch main --commit-hash "$DRONE_COMMIT_SHA" --commit-message "$DRONE_COMMIT_MESSAGE"
       - |
         for i in 1 2 3 4 5 6; do
-          if curl -fsSL https://legal.narpos.tr/privacy-narcrm | grep -q "NarCRM Gizlilik"; then
+          if curl -fsSL https://legal.narpos.tr/privacy-narcrm | grep -q "NarCRM Gizlilik" && curl -fsSL https://legal.narpos.tr/terms-narcrm | grep -q "NarCRM Kullanım"; then
             echo "Smoke test passed."
             exit 0
           fi

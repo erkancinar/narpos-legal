@@ -7,10 +7,11 @@ NarPOS Yazılım A.Ş. iç araçları için yasal belgeler — statik HTML site.
 
 ## Sayfalar
 
-- `index.html` — Landing (4 sayfaya link)
+- `index.html` — Landing (5 sayfaya link)
 - `privacy.html` — Gizlilik Politikası
 - `privacy-narcrm.html` — NarCRM Gizlilik Politikası
 - `terms.html` — Kullanım Koşulları
+- `terms-narcrm.html` — NarCRM Kullanım Sözleşmesi
 - `kvkk.html` — KVKK Aydınlatma Metni
 
 ## Lokal test
@@ -38,7 +39,7 @@ Drone:     https://ci.narpos.tr
 
 1. Statik yayın dosyalarını `dist/` içine paketler.
 2. `wrangler pages deploy` ile Cloudflare Pages direct upload yapar.
-3. `https://legal.narpos.tr/privacy-narcrm` smoke test kontrolünü çalıştırır.
+3. `https://legal.narpos.tr/privacy-narcrm` ve `https://legal.narpos.tr/terms-narcrm` smoke test kontrollerini çalıştırır.
 
 Key bilgileri local key depoda tutulur:
 
@@ -60,6 +61,7 @@ Deploy sonrası kontrol:
 
 ```powershell
 Invoke-WebRequest https://legal.narpos.tr/privacy-narcrm -UseBasicParsing
+Invoke-WebRequest https://legal.narpos.tr/terms-narcrm -UseBasicParsing
 ```
 
 ## Güncelleme
