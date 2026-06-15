@@ -24,13 +24,39 @@ python -m http.server 8000
 
 ## Deploy (Cloudflare Pages)
 
-GitHub repo'ya push → CF Pages otomatik deploy.
+Bu proje Cloudflare Pages üzerinde `narpos-legal` project olarak çalışır; mevcut production deploy geçmişi `ad_hoc` tipindedir. Yani sadece GitHub'a push etmek production yayınına almak için yeterli değildir.
+
+Key bilgileri local key depoda tutulur:
+
+```text
+C:\Projects\ai-workspace\private-keystore\services\cloudflare-narpos.env
+C:\Projects\ai-workspace\private-keystore\services\narpos-legal-pages.env
+```
+
+Production deploy için:
+
+```powershell
+cd C:\Projects\narpos-legal
+powershell -ExecutionPolicy Bypass -File .\scripts\deploy-cloudflare-pages.ps1
+```
+
+Script temiz bir geçici klasöre sadece yayın dosyalarını (`*.html`, `favicon.ico`, `assets/*`) kopyalar ve `wrangler pages deploy` ile Cloudflare Pages'e gönderir. `.git`, `.wrangler`, README veya çalışma dosyaları upload edilmez.
+
+Deploy sonrası kontrol:
+
+```powershell
+Invoke-WebRequest https://legal.narpos.tr/privacy-narcrm -UseBasicParsing
+```
 
 ## Güncelleme
 
-Her değişiklik commit + push → CF Pages otomatik build (~30 sn).
+Her değişiklik için sıra:
 
-Sayfa altında "Son güncelleme" tarihini değiştirmeyi unutma.
+1. Dosyayı güncelle.
+2. Sayfa altında "Son güncelleme" tarihini değiştir.
+3. `git commit` + `git push`.
+4. `scripts\deploy-cloudflare-pages.ps1` ile Cloudflare Pages production deploy.
+5. Canlı URL'yi kontrol et.
 
 ## Notlar
 
