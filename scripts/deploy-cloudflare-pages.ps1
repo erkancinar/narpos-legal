@@ -21,7 +21,7 @@ function Read-EnvFile {
         }
     }
 
-    return $values
+    return ,$values
 }
 
 $cloudflare = Read-EnvFile (Join-Path $KeystoreRoot 'services\cloudflare-narpos.env')
