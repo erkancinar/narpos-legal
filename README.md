@@ -7,8 +7,9 @@ NarPOS Yazılım A.Ş. iç araçları için yasal belgeler — statik HTML site.
 
 ## Sayfalar
 
-- `index.html` — Landing (3 sayfaya link)
+- `index.html` — Landing (4 sayfaya link)
 - `privacy.html` — Gizlilik Politikası
+- `privacy-narcrm.html` — NarCRM Gizlilik Politikası
 - `terms.html` — Kullanım Koşulları
 - `kvkk.html` — KVKK Aydınlatma Metni
 
