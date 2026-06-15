@@ -26,6 +26,20 @@ python -m http.server 8000
 
 Bu proje Cloudflare Pages üzerinde `narpos-legal` project olarak çalışır; mevcut production deploy geçmişi `ad_hoc` tipindedir. Yani sadece GitHub'a push etmek production yayınına almak için yeterli değildir.
 
+Otomatik deploy için Contabo üzerindeki self-host Drone CI kullanılır. Mevcut Drone kurulumu Bitbucket Cloud provider ile çalıştığı için bu repo GitHub yanında Bitbucket mirror olarak da push edilir:
+
+```text
+GitHub:    https://github.com/erkancinar/narpos-legal
+Bitbucket: git@bitbucket.org:erkancinar/narpos-legal.git
+Drone:     https://ci.narpos.tr
+```
+
+`main` branch'e Bitbucket push geldiğinde `.drone.yml` pipeline'ı çalışır:
+
+1. Statik yayın dosyalarını `dist/` içine paketler.
+2. `wrangler pages deploy` ile Cloudflare Pages direct upload yapar.
+3. `https://legal.narpos.tr/privacy-narcrm` smoke test kontrolünü çalıştırır.
+
 Key bilgileri local key depoda tutulur:
 
 ```text

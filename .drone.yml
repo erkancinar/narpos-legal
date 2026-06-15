@@ -1,0 +1,37 @@
+kind: pipeline
+type: docker
+name: deploy-cloudflare-pages
+
+trigger:
+  branch:
+    - main
+  event:
+    - push
+
+steps:
+  - name: deploy
+    image: node:22-alpine
+    environment:
+      CLOUDFLARE_EMAIL:
+        from_secret: cloudflare_email
+      CLOUDFLARE_API_KEY:
+        from_secret: cloudflare_api_key
+      CLOUDFLARE_ACCOUNT_ID:
+        from_secret: cloudflare_account_id
+    commands:
+      - apk add --no-cache curl
+      - mkdir -p dist/assets
+      - cp *.html favicon.ico dist/
+      - cp -R assets/. dist/assets/
+      - test -f dist/privacy-narcrm.html
+      - npx --yes wrangler@4.100.0 pages deploy dist --project-name narpos-legal --branch main --commit-hash "$DRONE_COMMIT_SHA" --commit-message "$DRONE_COMMIT_MESSAGE"
+      - |
+        for i in 1 2 3 4 5 6; do
+          if curl -fsSL https://legal.narpos.tr/privacy-narcrm | grep -q "NarCRM Gizlilik"; then
+            echo "Smoke test passed."
+            exit 0
+          fi
+          sleep 10
+        done
+        echo "Smoke test failed."
+        exit 1
