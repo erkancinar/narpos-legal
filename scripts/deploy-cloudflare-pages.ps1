@@ -12,16 +12,14 @@ function Read-EnvFile {
         throw "Env file not found: $Path"
     }
 
-    $values = @{}
-    Get-Content $Path | ForEach-Object {
-        if ($_ -match '^\s*([^#][A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$') {
-            $name = $Matches[1]
-            $value = $Matches[2].Trim().Trim('"').Trim("'")
-            $values[$name] = $value
-        }
+    $values = ConvertFrom-StringData -StringData (Get-Content -Raw $Path)
+    $normalized = @{}
+    foreach ($key in $values.Keys) {
+        $value = ([string]$values[$key]).Trim().Trim('"').Trim("'")
+        $normalized.Set_Item(([string]$key).Trim(), $value)
     }
 
-    return ,$values
+    return [hashtable]$normalized
 }
 
 $cloudflare = Read-EnvFile (Join-Path $KeystoreRoot 'services\cloudflare-narpos.env')
